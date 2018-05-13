@@ -109,9 +109,9 @@ public class TileType {
 		}
 	}
 	
-	public static TileType getCurrentType() {
-		return tiles.get(i);
-	}
+//	public static TileType getCurrentType() {
+//		return tiles.get(i);
+//	}
 	
 	public static void registerType(String symbol, TileType type) {
 		tiles.add(type);

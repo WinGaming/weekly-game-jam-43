@@ -1,12 +1,7 @@
 package de.wingaming.present;
 
-import de.wingaming.present.entity.EntityPresent;
-import de.wingaming.present.files.Loader;
-import de.wingaming.present.input.KeyboardManager;
 import de.wingaming.present.render.RenderAble;
-import de.wingaming.present.world.TileType;
 import de.wingaming.present.world.World;
-import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 
 public class Game {
@@ -33,31 +28,31 @@ public class Game {
 			ui.render();
 		}
 		
-		if (KeyboardManager.isDown(KeyCode.G)) {
-			KeyboardManager.release(KeyCode.G);
-			
-			TileType.nextType();
-		}
+//		if (KeyboardManager.isDown(KeyCode.G)) {
+//			KeyboardManager.release(KeyCode.G);
+//			
+//			TileType.nextType();
+//		}
 		
-		if (KeyboardManager.isDown(KeyCode.Z)) {
-			KeyboardManager.release(KeyCode.Z);
-			
-			Loader.saveWorld("t2", currentWorld);
-		}
+//		if (KeyboardManager.isDown(KeyCode.Z)) {
+//			KeyboardManager.release(KeyCode.Z);
+//			
+//			Loader.saveWorld("t2", currentWorld);
+//		}
 		
-		if (KeyboardManager.isDown(KeyCode.I)) {
-			KeyboardManager.release(KeyCode.I);
-			
-			getCurrentWorld().spawnEntity(new EntityPresent(getCurrentWorld().getPlayer().getPosition()));
-		}
+//		if (KeyboardManager.isDown(KeyCode.I)) {
+//			KeyboardManager.release(KeyCode.I);
+//			
+//			getCurrentWorld().spawnEntity(new EntityPresent(getCurrentWorld().getPlayer().getPosition()));
+//		}
 		
-		if (KeyboardManager.isDown(KeyCode.ESCAPE)) {
-			KeyboardManager.release(KeyCode.ESCAPE);
-			
-			currentWorld.setPaused(!currentWorld.isPaused());
-		}
+//		if (KeyboardManager.isDown(KeyCode.ESCAPE)) {
+//			KeyboardManager.release(KeyCode.ESCAPE);
+//			
+//			currentWorld.setPaused(!currentWorld.isPaused());
+//		}
 		
-		if (TileType.getCurrentType() != null) Main.gc.drawImage(TileType.getCurrentType().getTexture(), Main.WIDTH - 50, Main.HEIGHT - 80, 32, 32);
+		//if (TileType.getCurrentType() != null) Main.gc.drawImage(TileType.getCurrentType().getTexture(), Main.WIDTH - 50, Main.HEIGHT - 80, 32, 32);
 	}
 	
 	public void setUi(RenderAble ui) {
